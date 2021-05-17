@@ -100,7 +100,7 @@ questions:
                 schema:
                   type: path
                   hidden: true
-                  editable: false
+                  editable: true
                   default: "/tmp"
               - variable: hostPathEnabled
                 label: "Enable Custom Host Path for Chia Temp Volume"

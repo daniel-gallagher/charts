@@ -1,4 +1,0 @@
-image:
-  repository: plexinc/pms-docker
-  tag: 1.22.3.4392-d7c624def
-  pullPolicy: IfNotPresent

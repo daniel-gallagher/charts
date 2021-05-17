@@ -93,14 +93,14 @@ questions:
                     - "normalize/ixVolume"
                   show_if: [["hostPathEnabled", "=", false]]
                   default: "temp"
-                  editable: true
+                  editable: false
               - variable: mountPath
                 label: "Temp Mount Path"
                 description: "Path where the volume will be mounted inside the pod"
                 schema:
                   type: path
                   hidden: true
-                  editable: true
+                  editable: false
                   default: "/tmp"
               - variable: hostPathEnabled
                 label: "Enable Custom Host Path for Chia Temp Volume"

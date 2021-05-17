@@ -93,7 +93,7 @@ questions:
                     - "normalize/ixVolume"
                   show_if: [["hostPathEnabled", "=", false]]
                   default: "temp"
-                  editable: false
+                  editable: true
               - variable: mountPath
                 label: "Temp Mount Path"
                 description: "Path where the volume will be mounted inside the pod"

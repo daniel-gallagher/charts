@@ -79,3 +79,38 @@ questions:
                       schema:
                         type: hostpath
                         required: true
+        - variable: temp
+          label: "Temp Volume"
+          schema:
+            type: dict
+            attrs:
+              - variable: datasetName
+                label: "Temp Volume Name"
+                schema:
+                  type: string
+                  hidden: true
+                  $ref:
+                    - "normalize/ixVolume"
+                  show_if: [["hostPathEnabled", "=", false]]
+                  default: "temp"
+                  editable: false
+              - variable: mountPath
+                label: "Temp Mount Path"
+                description: "Path where the volume will be mounted inside the pod"
+                schema:
+                  type: path
+                  hidden: true
+                  editable: false
+                  default: "/tmp"
+              - variable: hostPathEnabled
+                label: "Enable Custom Host Path for Chia Temp Volume"
+                schema:
+                  type: boolean
+                  default: false
+                  show_subquestions_if: true
+                  subquestions:
+                    - variable: hostPath
+                      label: "Host Path for Chia Temp Volume"
+                      schema:
+                        type: hostpath
+                        required: true

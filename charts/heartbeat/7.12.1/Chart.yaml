@@ -1,0 +1,15 @@
+apiVersion: v1
+description: Monitor services for their availability with active probing
+name: heartbeat
+version: 1.0.0
+appVersion: 7.12.1
+keywords:
+- monitoring
+home: https://elastic.co/
+icon: https://static-www.elastic.co/v3/assets/bltefdd0b53724fa2ce/blt7669678e4e6152dc/5ea8c9063a474c52f7244b1c/brand-beats-220x130.svg
+sources:
+- https://github.com/elastic/beats-docker
+dependencies:
+  - name: common
+    repository: file://../../../library/common/2104.0.0
+    version: 2104.0.0

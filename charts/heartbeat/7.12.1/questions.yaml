@@ -1,0 +1,30 @@
+groups:
+  - name: "Container Environment Variables"
+    description: "Set the environment that will be visible to the container"
+
+questions:
+  - variable: containerEnvironmentVariables
+    description: "Container Environment Variables"
+    label: "Container Environment Variables"
+    group: "Container Environment Variables"
+    schema:
+      type: list
+      items:
+        - variable: environmentVariable
+          description: "Container Environment Variable"
+          label: "Container Environment Variable"
+          schema:
+            type: dict
+            attrs:
+              - variable: name
+                description: "Environment Variable Name"
+                label: "Environment Variable Name"
+                schema:
+                  type: string
+                  required: true
+              - variable: value
+                description: "Environment Variable Value"
+                label: "Environment Variable Value"
+                schema:
+                  type: string
+                  required: true
